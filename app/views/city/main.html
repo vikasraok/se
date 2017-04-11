@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="row" style="width: 100vw">
+  <div class="col-sm-12 col-md-3" ng-controller="searchController">
+    <ng-include src="'views/city/search.html'"></ng-include>
+  </div>
+  <div class="col-sm-12 col-md-9" ng-controller="mapsController">
+    <ng-include src="'views/city/maps.html'"></ng-include>
+  </div>
+</div>

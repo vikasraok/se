@@ -5,11 +5,14 @@
   function () {
     'use strict';
     angular.module('signEasyApp').
-      controller('countryController', ['$scope', 'countryService', function (scope, restCall) {
+      controller('countryController', ['$scope', 'countryService','$state', function (scope, restCall,state) {
         scope.country = {
           name: null,
           search: function () {
             if (this.name) {
+              state.go('city',{
+                country : this.name
+              });
             }
             this.name = null;
           }

@@ -7,13 +7,14 @@
     angular.module('signEasyApp').config([
       '$stateProvider', '$urlRouterProvider', function (stateProvider, urlRouterProvider) {
         stateProvider.state('main', {
-          url : '/search-country',
-          views : {
-            '' :{
-              templateUrl : 'views/country/main.html',
-              controller : 'countryController'
-            }
-          }
+          url: '/search-country',
+          templateUrl: 'views/country/main.html',
+          controller: 'countryController'
+        }).state('city', {
+          url: '/city-details',
+          templateUrl: 'views/city/main.html',
+          controller: 'cityController',
+          params: {country: null}
         });
         urlRouterProvider.otherwise('/search-country');
       }

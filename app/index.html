@@ -82,15 +82,22 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
-<script src="scripts/configs/config.js"></script>
-<script src="scripts/services/utils.js"></script>
+<script src="scripts/configs/states.js"></script>
+<script src="scripts/services/rest.js"></script>
 <script src="scripts/services/urls.js"></script>
+<script src="scripts/services/messageBroker.js"></script>
+<script src="scripts/directives/citySearch.js"></script>
 <script src="scripts/country/controller.js"></script>
+<script src="scripts/city/controller.js"></script>
+<script src="scripts/city/search.js"></script>
+<script src="scripts/city/maps.js"></script>
 <!-- endbuild -->
+<script src="http://maps.google.com/maps/api/js"></script>
 </body>
 </html>
