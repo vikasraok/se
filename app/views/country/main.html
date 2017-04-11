@@ -1,1 +1,18 @@
-<h3>search country</h3>
+<div class="center-block marg-top-20">
+  <div class="row text-center">
+    <h4>Enter name of a Country</h4>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <form class="input-group" ng-submit="country.search()">
+        <input type="text" class="form-control" placeholder="Search for..." ng-model="country.name"
+               autocomplete="off"
+               uib-typeahead="country as country.name for country in getCountry($viewValue)"
+               typeahead-min-length="2">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">Go!</button>
+      </span>
+      </form>
+    </div>
+  </div>
+</div>
