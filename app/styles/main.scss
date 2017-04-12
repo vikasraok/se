@@ -3,9 +3,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 $primary: #008BE7;
-$primary-dark : #006fb8;
-$navbar-padding :50px;
-$color : #666;
+$primary-dark: #006fb8;
+$navbar-padding: 50px;
+$color: #666;
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -14,38 +14,62 @@ $color : #666;
 }
 
 body {
-  padding:$navbar-padding 0 0 0;
+  padding: $navbar-padding 0 0 0;
 }
-body .view{
-  height:calc(100vh - #{$navbar-padding});
+
+body .view {
+  height: calc(100vh - #{$navbar-padding});
   display: flex;
   align-items: center;
   color: $color;
 }
 
 /*navbar overrides*/
-.navbar{
+.navbar {
   background-color: $primary;
   border-color: transparent;
 }
-.navbar .navbar-nav > li > a{
-  color : white;
+
+.navbar .navbar-nav > li > a {
+  color: white;
 }
-.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:hover, .navbar .navbar-nav > .active > a:focus{
+
+.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:hover, .navbar .navbar-nav > .active > a:focus {
   background-color: $primary-dark;
   color: white;
 }
-.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: $primary-dark;
 }
+
 .navbar-default .navbar-brand {
   color: white;
 }
+
 /*over rides*/
-.row{
+.row {
   padding: 10px;
 }
+
 /*helper class*/
-.marg-top-20{
+.marg-top-20 {
   margin-top: -20%;
+}
+
+/*maps screen*/
+.map-view {
+  width: 100vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .map-view {
+    position: absolute;
+    top: $navbar-padding;
+  }
+  .row {
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }

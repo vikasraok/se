@@ -5,7 +5,7 @@
   function () {
     'use strict';
     angular.module('signEasyApp').
-      controller('countryController', ['$scope', 'countryService','$state', function (scope, restCall,state) {
+      controller('countryController', ['$scope','$state', function (scope,state) {
         scope.country = {
           name: null,
           search: function () {
@@ -16,11 +16,6 @@
             }
             this.name = null;
           }
-        };
-        scope.getCountry = function (viewValue) {
-          return restCall.searchCountry(viewValue).then(function (response) {
-            return response.data;
-          });
         };
       }]);
   })();

@@ -4,8 +4,11 @@
 (
   function () {
     'use strict';
-    angular.module('signEasyApp').controller('searchController', ['$scope', '$state', function (scope, state) {
-      scope.country  = state.params.country;
-      console.log(scope.country);
-    }]);
+    angular.module('signEasyApp').
+      controller('searchController', ['$scope', '$state', 'messageService', function (scope, state, messageService) {
+        scope.country = state.params.country;
+        messageService.broadcastMessage({
+          test: 'testing service without return'
+        });
+      }]);
   })();
