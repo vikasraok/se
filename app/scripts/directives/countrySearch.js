@@ -2,6 +2,7 @@
  * Created by vikas on 12-Apr-17.
  */
 (function(){
+  'use strict';
   angular.module('signEasyApp').directive('countrySearch',['countryService',function(restCall){
     return {
       restrict : 'A',

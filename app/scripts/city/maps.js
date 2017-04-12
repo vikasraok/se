@@ -6,13 +6,10 @@
   angular.module('signEasyApp').controller('mapsController',['$scope','NgMap','$state','messageService',function(scope,NgMap,state,messageService){
     scope.test = 'maps';
     scope.country = state.params.country;
-    NgMap.getMap().then(function(map) {
-      /*console.log(map.getCenter());
-      console.log('markers', map.markers);
-      console.log('shapes', map.shapes);*/
+    NgMap.getMap().then(function() {
     });
     messageService.registerListener(function(data){
-      console.log(data);
+      scope.country = data;
     });
   }]);
 })();

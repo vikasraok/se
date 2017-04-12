@@ -5,10 +5,10 @@
   function () {
     'use strict';
     angular.module('signEasyApp').
-      controller('searchController', ['$scope', '$state', 'messageService', function (scope, state, messageService) {
+      controller('searchController', ['$scope', '$state','messageService', function (scope, state,messageService) {
         scope.country = state.params.country;
-        messageService.broadcastMessage({
-          test: 'testing service without return'
-        });
+        scope.updateCountry = function(country){
+          messageService.broadcastMessage(country);
+        };
       }]);
   })();
