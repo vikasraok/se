@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-12">
       <label for="country">Country:</label>
-      <input class="form-control" id="country" placeholder="Search for..." ng-model="$parent.country" country-search type="text" typeahead-on-select="updateCountry($item)">
+      <input class="form-control" id="country" placeholder="Search for..." ng-model="country" country-search type="text" typeahead-on-select="updateCountry($item)">
     </div>
   </div>
   <div class="row">
@@ -16,11 +16,11 @@
     </div>
   </div>
 </div>
-<div class="divider"></div>
-<div class="well">
+<div class="well" ng-if="country.name ==='India'">
   <div class="row">
     <div class="col-sm-12">
-      directive for city
+      <label for="country">City:</label>
+      <input class="form-control" id="city" placeholder="Search for city..." ng-model="city" city-search type="text" typeahead-on-select="updateCity($item)">
     </div>
   </div>
 </div>

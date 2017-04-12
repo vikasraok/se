@@ -9,6 +9,11 @@
         scope.country = state.params.country;
         scope.updateCountry = function(country){
           messageService.broadcastMessage(country);
+          localStorage.setItem('country', JSON.stringify(country));
+        };
+        scope.updateCity = function(city){
+          scope.country.latlng[0]= city.lat;
+          scope.country.latlng[1] = city.lon;
         };
       }]);
   })();
