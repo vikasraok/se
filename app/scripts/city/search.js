@@ -14,6 +14,7 @@
         scope.updateCity = function(city){
           scope.country.latlng[0]= city.lat;
           scope.country.latlng[1] = city.lon;
+          messageService.broadcastMessage(scope.country);
         };
       }]);
   })();
